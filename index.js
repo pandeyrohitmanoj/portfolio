@@ -13,13 +13,15 @@ function sendEmail(event) {
 
   // Parameters for the email template
   const templateParams = {
-    name,
-    email,
-    message,
+    to:'rohitpandey20002017@gmail.com',
+    from:email,
+    cc:'',
+    subject:'from portfolio',
+    text:message,
   };
 
   // Send the email using EmailJS
-  emailjs.send('template_91ou5y6', 'service_rh8ymp9', templateParams)
+  emailjs.send('gmail', 'template_91ou5y6', templateParams)
     .then(function(response) {
       console.log('Email sent successfully:', response.status, response.text);
       // You can add any success message or further actions here
