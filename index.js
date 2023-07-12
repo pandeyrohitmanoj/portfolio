@@ -1,5 +1,5 @@
 
-
+const emailjs = require('emailjs')
 // Initialize EmailJS with your user ID
 emailjs.init('jiNZ2YVmdz_LkV5et');
 
@@ -65,8 +65,8 @@ function detectPreferredColorScheme() {
   
   // Add event listeners
   const switchDarkModeButton = document.getElementById('switch-dark-mode-button');
-  const hamburgerIcon = document.getElementsByClassName('hamburger')[0];
   switchDarkModeButton.addEventListener('click', toggleDarkMode);
+  const hamburgerIcon = document.getElementsByClassName('hamburger')[0];
   hamburgerIcon.addEventListener('click', toggleSidebar);
   
   // Run the detectPreferredColorScheme function on page load
