@@ -1,5 +1,4 @@
 
-const emailjs = require('emailjs')
 // Initialize EmailJS with your user ID
 emailjs.init('jiNZ2YVmdz_LkV5et');
 
