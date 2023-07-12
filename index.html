@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Rohit Manoj Pandey</title>
+  <link rel="icon" href="images/rmp.jpg" />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="#">Rohit.dev</a>
+      </div>
+
+      <div class="navbar-right">
+        <span onclick="scrollToClass('first-page')">Home</span>
+        <span onclick="scrollToClass('about-me')">About</span>
+        <span onclick="scrollToClass('about-me-contact-button')">Projects</span>
+        <span onclick="scrollToClass('contact')">Contact</span>
+      </div>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div onclick="scrollToClass('first-page')">Home</div>
+      <div onclick="scrollToClass('about-me')">About</div>
+      <div onclick="scrollToClass('about-me-contact-button')">Projects</div>
+      <div onclick="scrollToClass('contact')">Contact</div>
+    </div>
+  </nav>
+
+  
+  <section class="first-page">
+    <div class="first-page-title">Hey, I'm Rohit Manoj pandey</div>
+    <div class="first-page-subtitle">I am a Full Stack Developer that creates user-freindly web application using MERN stack to materialize client's idea to the best.</div>
+  </section>
+
+  <section class="about-me" >
+    <div class="about-me-text">About me</div>
+    <div class="about-me-blue-line"></div>
+    <div class="about-me-grid">
+        <div class="about-me-description">          
+          <div class="about-me-description-title">
+            Get To know me
+          </div>
+          <div class="about-me-description-info">
+            Hi I'm a Full Stack Developer creating fully functional solution using MERN stack and different CSS frameworks. But thats not just it, I like to learn different technology mostly using good books and youtube lectures.
+            <br/>
+            <br/>
+            I like to implement consistent dynamic Front-end with secure efficient backend. My goal is to become Solution Architect as soon as possible, thats why I am learning application of Web security and dev-ops.
+          </div>
+        </div>
+        <div class="about-me-skill">
+            <div class="about-me-skill-title" >My Skills</div>
+            <div class="about-me-skillsBox">
+                <div class="about-me-skillsBox-skills">HTML</div>
+                <div class="about-me-skillsBox-skills">CSS</div>
+                <div class="about-me-skillsBox-skills">JavaScript</div>
+                <div class="about-me-skillsBox-skills">SASS</div>
+                <div class="about-me-skillsBox-skills">Bootstrap</div>
+                <div class="about-me-skillsBox-skills">SQL Server</div>
+                <div class="about-me-skillsBox-skills">Mongo DB</div>
+                <div class="about-me-skillsBox-skills">Express JS</div>
+                <div class="about-me-skillsBox-skills">react JS</div>
+                <div class="about-me-skillsBox-skills">node JS</div>
+                <div class="about-me-skillsBox-skills">TypeScript</div>
+                <div class="about-me-skillsBox-skills">TRPC</div>
+                <div class="about-me-skillsBox-skills">Git</div>
+            </div>
+        </div> 
+    </div>
+    <button class="about-me-contact-button" onclick="scrollToClass('contact')">Contact</button>
+  </section>
+
+  <section class="projects">
+    <div class="projects-title">Projects</div>
+    <div class="projects-subtitle">This are some of my Personal Projects.</div>
+    <div class="projects-container">
+        <img src='images/project-first-page.png' alt="project-image"></img>
+        <div class="projects-container-description">
+          <div class="projects-container-description-title">Zoom-Car Rental</div>
+          <div class="projects-container-description-info">Zoomcar Rental is car rental website created using MERN stack hosted on vercel. Its a clone of real time application named. Zoomcar website and I created this one to debug the problems I saw in the layout and solved it. </div>
+          <button class="projects-container-description-button" onclick="openProject()" >Case Study</button>
+        </div>
+    </div>
+  </section>
+
+
+  <section class="contact">
+    <div class="contact-title">Contact</div>
+    <div class="contact-subTitle">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible </div>
+    <form class="contact-form">
+        <div class="contact-form-element">
+            <div class="contact-form-element-for">Name</div>
+            <input required id='name' type="text" class="form-element-input-name" placeholder="Enter Your Name">
+        </div>
+        <div class="contact-form-element">
+            <div class="contact-form-element-for">Email</div>
+            <input required id='email' type="email" class="form-element-input-email" placeholder="Enter your Email">
+        </div>
+        <div class="contact-form-element">
+            <div class="contact-form-element-for">Message</div>
+            <textarea required id='message' type="text" rows="10" cols="20" class="form-element-input-message" placeholder="Enter Your Message"></textarea>
+        </div>
+        <div class="contact-form-button-container"><button class="contact-form-button">Submit</button></div>
+    </form>
+    </section>
+
+    <section class="bottom">
+        <div class="bottom-social">
+          <div class="bottom-title">Social</div>
+          <div class="bottom-socialMedia-box">
+              <img src="images/insta.png" alt="Instagram_icon">
+              <img src="images/facebook.png" alt="feacebook_icon">
+              <img src="images/linkedin.png" alt="linkedin_icon">
+              <img src="images/twitter.png" alt="twitter_icon">
+              <img src="images/youtube.png" alt="youtube_icon">
+          </div>
+        </div>
+        <div class="bottom-right-container">
+          <div class="bottom-createdBy">Rohit pandey</div>
+          <div class="bottom-createdBy-description">
+            I am a Full Stack Developer that creates user-freindly web application using MERN stack to materialize client's idea to the best.
+          </div>
+        </div>
+        <hr>
+        <div class="bottom-rights">Created by Rohit pandey</div>
+    </section>
+
+
+
+
+    <script src="https://cdn.emailjs.com/sdk/2.5.1/email.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="none" style="height: 100vh; width: 100vw;">
+  <defs>
+    <pattern id="pattern" patternUnits="userSpaceOnUse" width="400" height="200">
+      <polygon points="0,100 100,0 200,100 100,200" fill="hsl(0, 0%, 90%)" />
+      <polygon points="100,100 200,0 200,200" fill="hsl(0, 0%, 92%)" />
+      <polygon points="0,0 100,200 0,200" fill="hsl(0, 0%, 96%)" />
+      <polygon points="100,0 200,100 0,100" fill="hsl(0, 0%, 88%)" />
+      <polygon points="0,0 200,0 100,200" fill="hsl(0, 0%, 98%)" />
+      <!-- Mirrored shapes for symmetry -->
+      <polygon points="-200,100 -100,0 0,100 -100,200" fill="hsl(0, 0%, 90%)" />
+      <polygon points="-100,100 0,0 0,200" fill="hsl(0, 0%, 92%)" />
+      <polygon points="-200,0 -100,200 -200,200" fill="hsl(0, 0%, 96%)" />
+      <polygon points="-100,0 0,100 -200,100" fill="hsl(0, 0%, 88%)" />
+      <polygon points="-200,0 0,0 -100,200" fill="hsl(0, 0%, 98%)" />
+
+      <!-- Additional shapes on the left for symmetry -->
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#pattern)" />
+</svg>

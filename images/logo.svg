@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+  </style>
+  <text x="0" y="70" font-size="60" font-family="Roboto, sans-serif" font-weight="700" fill="hsl(0, 0%, 100%)">Zoom-car</text>
+</svg>

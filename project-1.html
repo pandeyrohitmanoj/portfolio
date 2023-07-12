@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom-car rental</title>
+    <link href="project-1.css" rel="stylesheet" >
+    <link rel="icon" href="images/rmp.jpg" />
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <div class="navbar-left">
+            <a href="#">Rohit.dev</a>
+          </div>
+    
+          <div class="navbar-right">
+            <span onclick="transfer('first-page')">Home</span>
+          </div>
+    </nav>
+    <div class="container">
+        <section class="first-page">
+            <div class="first-page-title">Zoom-car Rental</div>
+            <div class="first-page-subtitle">Zoom-car rental is a e-commerce website that allows you to rent a car, out of vast database of the website. </div>
+        </section>
+        <section class="container-projectImage">
+            <img class="container-projectImage" src="images/project-first-page.png" alt="project-image">
+
+        </section>
+        <section class="container-project-description">
+            <div class="container-zoomcar-title">
+                Projection Description
+            </div>
+            <div class="container-zoomcar-description">
+                Zoom-car webiste Is an e-commerce website that allows Its user to rent a car. The website has huge repository of cars and It provides Its user with UI to rent any of car, by providing some personal Information like name, country, city , 'from' to 'to' date,etc. 
+                <br><br>
+                The website will find parameterized number of cars of different size, fuel type and price range, user can get all the available cars available according to their location. There isn't any process for car renting, instead of that car user will book will not be available for the time period user has selected it.  All the cars user rents , Its details like car names, date range and image are visible in history under sidebar. 
+                <br><br>
+                User can logout anytime using logout button under sidebar. 
+                <br><br>
+                The purpose of this app is to showcase my skills in web development. During my time at Infosys, I honed my skills in identifying and fixing code and UI issues before clients encounter them. To demonstrate my debugging skills, I chose to clone a well-established website and address any problems I found in my solution.
+                <br><br>
+            </div>
+            <img src="images/Node Backend.jpg" alt="frontend-flowchart" class="container-zoomcar-description-flowchart">
+            <div class="container-zoomcar-description-flowchart-description">Fig. 1.0 backend-flowchart</div>
+            <div class="container-zoomcar-description">
+                <div class="container-zoomcar-description-headTItle">Backend Components:</div>
+                
+                The backend of my MERN app consists of five endpoints, each serving a different purpose. These endpoints incorporate validation measures to ensure basic web security, checking the provided data for the preferred type and appropriate syntax using regular expressions (regex).
+                <br><br>
+                <div class="container-zoomcar-description-title">Car Endpoint:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Purpose:</div> Saves car information to the database.
+                <br>
+                <div class="container-zoomcar-description-title">Workflow:</div> The endpoint fetches the car image link from Google Drive, dynamically creates a URL to access the image, and saves the car data into the "cars" collection in the database.
+                <br>
+                <div class="container-zoomcar-description-title">Validation:</div> The endpoint validates the input data, ensuring it follows the required syntax and data types.
+                <br><br>
+                <div class="container-zoomcar-description-title">Cities Endpoint:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Purpose:</div> Updates the "cities" collection in the database.
+                Workflow: Each document in the "cities" collection consists of a variable named "countryName" containing country names and a variable named "cityName" containing a set of cities. The endpoint validates the input and adds new cities to the respective country's set.
+                <br>
+                <div class="container-zoomcar-description-title">Validation:</div> The endpoint ensures that there are no duplicate city names and performs appropriate validation for the input data.
+                <br><br>
+                <div class="container-zoomcar-description-title">Country Endpoint:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Purpose:</div> Updates the "countries" collection in the database.
+                Workflow: The "countries" collection contains a single file with a set named "countryName" that stores all the country names where the service is available. The endpoint validates the input and adds new countries to the set.
+                <br>
+                <div class="container-zoomcar-description-title">Validation:</div> The endpoint validates the input data, ensuring it follows the required syntax and data types.
+                <br><br>
+                <div class="container-zoomcar-description-title">Signup Endpoint:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Purpose:</div> Allows users to sign up and update user data in the "userData" collection.
+                <br>
+                <div class="container-zoomcar-description-title">Workflow:</div> The endpoint validates the input data and encrypts the password before saving it to the database to enhance security in case of a potential breach.
+                <br>
+                <div class="container-zoomcar-description-title">Validation:</div> TThe endpoint validates the input data, ensuring it follows the required syntax and data types.
+                <br><br>
+                <div class="container-zoomcar-description-title">Login Endpoint:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Purpose:</div> Validates user credentials and provides access to user data.
+                <br>
+                <div class="container-zoomcar-description-title">Workflow:</div> The endpoint validates the provided credentials, retrieves the encrypted password from the "userData" collection, decrypts it, and cross-checks it to verify the correctness of the login. If successful, the user's data is fetched and returned as the output.
+                <br>
+                <div class="container-zoomcar-description-title">Validation:</div> The endpoint validates the input data, ensuring it follows the required syntax and data types.
+            </div>
+            <img src="images/UI.jpg" alt="frontend-flowchart" class="container-zoomcar-description-flowchart">
+            <div class="container-zoomcar-description-flowchart-description">Fig. 2.0 frontend-flowchart</div>
+
+            <div class="container-zoomcar-description">
+                <div class="container-zoomcar-description-headTItle">Frontend Components:</div>
+                <br>
+                <div class="container-zoomcar-description-title">Information Box:</div> This component is in the first page bottom section and displays the city provided during sign-in. The selected city is indicated in the first input field.
+                <br><br>
+                <div class="container-zoomcar-description-title">Date Selection:</div> The second input field displays the selected date range in the format "yy-mm-dd to yy-mm-dd". Clicking on the input field opens two calendars in the middle of the screen. The first calendar allows you to choose the "from" date, while the second calendar is for selecting the "to" date.
+                <br><br>
+                <div class="container-zoomcar-description-title">Get Car Button:</div> Clicking this button scrolls you down to the car listing section. The available cars are fetched from the database based on the city and date range you selected.
+                <br><br>
+                <div class="container-zoomcar-description-title">Services Display:</div> This section showcases various services provided.
+                
+                <br><br>
+                <div class="container-zoomcar-description-title"> Reviews:</div> Users can view and read reviews about the services.
+                
+                <br><br>
+                <div class="container-zoomcar-description-title">Company Policies:</div> This section provides information about the company's terms and conditions.
+                
+                <br><br>
+                <div class="container-zoomcar-description-title">Support:</div> Users can access support-related information here.
+                
+                <br><br>
+                <div class="container-zoomcar-description-title">Country and City Selection:</div> This section fetches a list of countries and their respective cities where services are available. The endpoint for fetching cities is defined in the requests.js file located at src/Components/requests.js.
+                          
+            </div>
+            <div class="container-zoomcar-softwareDesignImage"></div>
+        </section>
+        
+    <section class="bottom">
+        <div class="bottom-social">
+          <div class="bottom-title">Social</div>
+          <div class="bottom-socialMedia-box">
+              <img src="images/insta.png" alt="Instagram_icon">
+              <img src="images/facebook.png" alt="feacebook_icon">
+              <img src="images/linkedin.png" alt="linkedin_icon">
+              <img src="images/twitter.png" alt="twitter_icon">
+              <img src="images/youtube.png" alt="youtube_icon">
+          </div>
+        </div>
+        <div class="bottom-right-container">
+          <div class="bottom-createdBy">Rohit pandey</div>
+          <div class="bottom-createdBy-description">
+            I am a Full Stack Developer that creates user-freindly web application using MERN stack to materialize client's idea to the best.
+          </div>
+        </div>
+        <hr>
+        <div class="bottom-rights">Created by Rohit pandey</div>
+    </section>
+    </div>
+
+      <script src="project-1.js" ></script>
+    
+</body>
+</html>
