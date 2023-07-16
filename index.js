@@ -87,8 +87,8 @@ function detectPreferredColorScheme() {
 
   function reachSocialMediaForIcon( iconName ){
     switch(iconName){
-      case "youtube":
-      window.location.href='https://www.youtube.com/channel/UChztW3uF4e6kqO--ZS-zbHA'
+      case "github":
+      window.location.href='https://github.com/pandeyrohitmanoj'
       break
       case "facebook":
       window.location.href='https://www.facebook.com/profile.php?id=100021839953940'

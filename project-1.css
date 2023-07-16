@@ -101,6 +101,26 @@ body{
     text-align: center;
   }
 
+  .first-page-button {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    max-width: 90%;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    border:0;
+    background-color:hsl(220, 90%, 50%);
+    color: hsl(0, 0%, 100%);
+    transition: margin 0.5s;
+  }
+  .first-page-button:hover {
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+
+
 .container-projectImage {
   height: max(100svh,max-content);
   margin: 4rem auto;
