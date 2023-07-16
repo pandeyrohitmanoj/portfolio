@@ -203,6 +203,7 @@ body{
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
 }
+
 hr {
   height: 0;
   width: 100%;
@@ -232,11 +233,13 @@ hr {
       background-size: contain;
   }
 }
+
 .container-zoomcar-description-headTItle {
   font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
 }
+
 .container-zoomcar-description-flowchart-description{
   font-size: 1.5rem;
   font-weight: 700;
@@ -244,7 +247,12 @@ hr {
   margin: 0.5rem auto 3rem auto;
   text-transform: uppercase;
 }
+
 .container-zoomcar-description-title {
   font-size: 1.25rem;
   font-weight: 800;
+}
+
+.bottom-social-icon:hover {
+  cursor:pointer
 }

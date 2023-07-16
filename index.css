@@ -618,6 +618,10 @@ body{
       margin-left:0;
     }
   }
+
+  .bottom-social-icon:hover {
+    cursor:pointer
+  }
   
   /* @media screen and (max-width:300px) {
     * {
