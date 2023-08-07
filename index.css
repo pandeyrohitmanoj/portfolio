@@ -195,7 +195,7 @@ body{
   .about-me-grid{
     display: grid;
     height: max-content;
-    width: min(70svw,100ch);
+    width: 100%;
     padding: 0 auto;
     gap:2rem;
     padding-top: 2rem;
