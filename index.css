@@ -16,7 +16,7 @@ font-family: ; */
     color: hsla(0, 0%, 0%);
 }
 body{
-    overflow-y: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     height: 100svh;
     position: relative;
@@ -157,8 +157,9 @@ body{
     margin: 0 auto ;
   }
   .about-me-text {
+    word-wrap: break-word;
     text-transform: uppercase;
-    width: min(75vw,75ch);
+    width: clamp(75vw,75ch,100svw);
     font-size: 2.5rem;
     letter-spacing: 3px;
     word-spacing: 5px;
@@ -259,8 +260,10 @@ body{
   }
   
   .about-me-contact-button {
+    word-wrap: break-word;
     margin: 2rem auto 0 auto;
-    font-size: 0.8rem;
+    max-width: 90svw;
+    font-size: clamp(2vw,0.8rem);
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Work Sans', sans-serif;
@@ -284,11 +287,12 @@ body{
   .projects {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: min(70svw,100ch);
+    width: 90svw;
     margin: 4rem auto 6rem auto;
     gap: 1rem;
   }
   .projects-title {
+    word-wrap: break-word;
     grid-column: span 2;
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -312,7 +316,7 @@ body{
     text-align: center;
     margin: 1rem 0 0 0;
     height: max-content;
-    max-width: 75svw;
+    /* max-width: 75svw; */
   }
 
   .projects-project1-image {
@@ -390,6 +394,7 @@ body{
     margin: 1rem auto;
   }
   .contact-title {
+    word-wrap: break-word;
     text-transform: uppercase;
     font-size: 2.25rem;
     letter-spacing: 3px;
@@ -413,7 +418,7 @@ body{
 
   .contact-form{
     min-height: 50svh;
-    /* width: min(70svw,75ch); */
+    width: clamp(70svw,75ch, 90svw);
     box-shadow: 0 0.5rem 1rem 0 hsl(0, 0%, 0%);
     font-size: 1rem;
     font-family: 'Work Sans', sans-serif;
@@ -431,7 +436,7 @@ body{
   .contact-form input,textarea {
     min-height: 5svh;
     padding: 1rem ;
-    width: 90%;
+    width: 95%;
     margin: 1rem;
     background-color: hsl(0, 0%, 95%);
     font-family: 'Public Sans','Roboto Serif', serif, sans-serif;
@@ -454,6 +459,9 @@ body{
     display: flex;
     justify-content:flex-end;
     align-items: flex-end;
+  }
+  .contact-form-button-container>button:hover {
+    cursor: pointer;
   }
   .contact-form-button {
     background-color: hsl(259, 79%, 59%);
@@ -529,7 +537,6 @@ body{
     html{
         font-size: 18px;
     }
-    
 
     .first-page {
         background: url('./images/first-page-smaller-screen.svg ') repeat ;  
@@ -593,6 +600,28 @@ body{
         font-size: 0.7rem;
     }
   }
+
+  @media screen and (max-width:1000px) {
+    .first-page-title {
+      width: 100%;
+      padding: 3rem 5px 1rem 5px;
+    }
+    .first-page-subtitle {
+      width: 100%;
+      padding: 0 8px;
+      margin-top:2.5rem;
+    }
+    .contact-form {
+      padding: 1rem 10px;
+    }
+    .contact-form input, textarea{
+      margin: 1rem 20px 1rem 5px ;
+      border-radius: 10px;
+    }
+    .form-element-input-message {
+      max-width: 95%;
+    }
+  }
   
 
   @media screen and (max-width:1000px) {
@@ -630,3 +659,15 @@ body{
     }
   } */
   
+  .animate-left{
+    animation: left 3s linear;
+  }
+
+  @keyframes left {
+    0% {
+      margin-right:5rem;
+    }
+    100% {
+      margin-right:1rem;
+    }
+  }

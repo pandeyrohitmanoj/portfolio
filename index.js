@@ -64,13 +64,13 @@ function detectPreferredColorScheme() {
   }
   
   // Add event listeners
-  const switchDarkModeButton = document.getElementById('switch-dark-mode-button');
-  switchDarkModeButton.addEventListener('click', toggleDarkMode);
-  const hamburgerIcon = document.getElementsByClassName('hamburger')[0];
-  hamburgerIcon.addEventListener('click', toggleSidebar);
+  // const switchDarkModeButton = document.getElementById('switch-dark-mode-button');
+  // switchDarkModeButton.addEventListener('click', toggleDarkMode);
+  // const hamburgerIcon = document.getElementsByClassName('hamburger')[0];
+  // hamburgerIcon.addEventListener('click', toggleSidebar);
   
   // Run the detectPreferredColorScheme function on page load
-  detectPreferredColorScheme();
+  // detectPreferredColorScheme();
 
 
   function scrollToClass( className ) {
@@ -104,3 +104,5 @@ function detectPreferredColorScheme() {
       break
     }
   }
+
+  
