@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&family=Roboto+Serif:wght@100;200;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500,600,800&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500,600,800&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
 /* font-family: 'Public Sans','Roboto Serif', serif, sans-serif;
 font-family: ; */
 
 ::-webkit-scrollbar{
-    width: 0px;
+    width: 0;
 }
 *, *::before, *::after {
     margin: 0;
@@ -21,7 +22,12 @@ body{
     height: 100svh;
     position: relative;
 }
+
+
+
+
 .navbar {
+  z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +36,7 @@ body{
     width: 100svw;
     padding: 25px;
     font-weight: 700;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(0, 0%, 0%);
     font-style: normal;
     font-family: 'Roboto Serif', serif;
     box-shadow: 0 20svh 25svh hsla(0, 0%, 40%,0.2);
@@ -38,40 +44,69 @@ body{
     top:0;
     left:0;
   }
+
   .navbar * {
     text-decoration: none;
+    
+    color: hsl(0,0%,100%);
   }
+
+  
+  #frontPageImage {
+    background-size: cover;
+    height: 100svh;
+    width: 100svw;  
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    object-fit: cover;
+  }
+
   .first-page{
-    min-height: 100svh;
+    position: relative;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('./images/firs-page.svg') repeat ;  
-    background-size: contain;
-
-  }
+    overflow-y: auto ;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+  }   
   .first-page-title{
-    text-transform: uppercase;
+    text-transform: uppercase; 
+    position: relative;
+    transform-style: preserve-3d;
+    height: 40svh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end ;
     width: min(75vw,75ch);
-    font-size: 2rem;
+    font-size: 3.5rem;
     letter-spacing: 3px;
-    width: min(75vw,75ch);
     word-spacing: 5px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 800;
     line-height: 3rem;
     text-align: center;
+    color: hsl(0, 0%, 100%);
   }
 
   .first-page-subtitle{
+    font-size: 1.25rem;
+    position: relative;
+    height: 60svh;
     width: min(75vw,75ch);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     font-weight: 600;
     line-height: 1.8;
     letter-spacing: 1.5px;
     word-spacing: 5px;
     margin-top: 1rem;
-    /* font-family: 'Work Sans', sans-serif; */
+    color: hsl(0,0%, 100%);
     font-family: 'Public Sans';
     text-align: center;
   }
@@ -95,6 +130,11 @@ body{
     .navbar-left{
         display: none;
     }
+    .first-page-subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
   }
   .hamburger {
     display: none;
@@ -148,16 +188,20 @@ body{
   
   .about-me {
     min-height: 90svh;
-    max-width: 75svw;
+    max-width: 100svw;
+    padding: 5svh 10svw 10svh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     flex-direction: column;
     margin: 0 auto ;
+    z-index: 3;
+    background-color: hsl(0, 0%, 0%);
   }
   .about-me-text {
     word-wrap: break-word;
+    color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     width: clamp(75vw,75ch,100svw);
     font-size: 2.5rem;
@@ -170,14 +214,6 @@ body{
     margin: 3rem 0 0 0;
     animation: textUp 2s 0s ;
   }
-  @keyframes textUp {
-    from {
-      color: hsl(0, 0%, 100%);
-    }
-    to {
-      color: hsl(0, 0%, 00%);
-    }
-  }
 
   .about-me-description {
     font-weight: 600;
@@ -185,8 +221,8 @@ body{
   }
 
   .about-me-blue-line {
-    border: 2px solid hsl(220, 50%, 50%);
-    width:2rem;
+    border: 2px solid hsl(220, 100%, 50%);
+    width:5rem;
     height: 0;
     border-radius: 20px;
     margin: 0 auto;
@@ -216,8 +252,7 @@ body{
   .about-me-skill-title,.about-me-description-title  {
     margin:1rem 0 2rem 0;
     font-family: 'Work Sans', sans-serif;
-    /* margin: 0 auto; */
-    font-weight: 800;
+    color: hsl(0, 0%, 100%);
     font-size: 1.25rem;
   }
   .about-me-skillsBox {
@@ -230,7 +265,7 @@ body{
     height:max-content;
   }
   .about-me-description-info {
-    color: hsl(0,0%,45%);
+    color: hsl(0,0%,80%);
     text-align: left;
     font-family: 'Public Sans','Roboto Serif', serif, sans-serif;
     line-height: 1.5;
@@ -255,7 +290,7 @@ body{
     font-size:medium;
     font-weight: 700;
     background-color: hsl(0, 0%, 95%);
-    color: hsl(0,0%,30%);
+    color: hsl(0,0%,10%);
     border-radius: 7px;
   }
   
@@ -287,9 +322,13 @@ body{
   .projects {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 90svw;
-    margin: 4rem auto 6rem auto;
+    width: 100svw;
+    padding: 5svh 10svw 15svh 10svw;
     gap: 1rem;
+    background-color: hsl(0, 0%, 10%)  ;
+  }
+  .projects> * {
+    color: hsl(0, 0%, 100%);
   }
   .projects-title {
     word-wrap: break-word;
@@ -312,7 +351,7 @@ body{
     word-spacing: 2px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    color: hsl(0, 0%, 45%);
+    color: hsl(0, 0%, 95%);
     text-align: center;
     margin: 1rem 0 0 0;
     height: max-content;
@@ -340,7 +379,7 @@ body{
     grid-column: span 2;
   }
   .projects-container-description-info {
-    color: hsl(0, 0%, 45%);
+    color: hsl(0, 0%, 75%);
     margin-top: 0.5rem;
   }
 
@@ -373,14 +412,14 @@ body{
     width: 100%;
   }
   .projects-container-description-title {
+    color: hsl(0, 0%, 100%);
     font-weight: bolder;
     font-size: 1.5rem;
   }
   .contact {    
     /* width: min(70svw,100ch); */
     width: 100svw;
-    margin: 1rem auto 0 auto;
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 15%);
     padding-bottom: 4rem;
     min-height: 60svh;
     display: flex;
@@ -392,6 +431,7 @@ body{
   .contact>* {
     width: min(65svw,80ch);
     margin: 1rem auto;
+    color: hsl(0, 0%, 100%);
   }
   .contact-title {
     word-wrap: break-word;
@@ -413,7 +453,7 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     text-align: center;
-    color: hsl(0, 0%, 0%);    
+    color: hsl(0, 0%, 90%);    
   }
 
   .contact-form{
@@ -427,6 +467,8 @@ body{
     word-spacing: 1px;
     background-color: hsl(0, 0%, 100%);
     padding: 1rem 1.25rem;
+    border-radius: 15px;
+    padding-left: 1.75rem;
   }
 
   .contact-form>*{
@@ -447,7 +489,7 @@ body{
     font-size: 0.8rem;
   }
   .form-element-input-message{
-    max-width: 90%;
+    max-width: 100%;
     resize: none;
     min-height: 18svh;
   }
@@ -538,10 +580,16 @@ body{
         font-size: 18px;
     }
 
-    .first-page {
-        background: url('./images/first-page-smaller-screen.svg ') repeat ;  
-        background-size: contain;
+    .first-page-title {
+      letter-spacing: 1px;
+      font-size: 2.75rem;
     }
+    .first-page-subtitle {
+      font-size: 0.85rem;
+      max-width: 80svw;
+      margin-top: 2svh;
+    }
+    
 
     .navbar-right,
     .hamburger {
@@ -551,6 +599,16 @@ body{
     .navbar {
       justify-content: flex-end;
       width: 100svw;
+    }
+
+    .hidden {
+        margin-right: 10rem;
+        transition: all 5s;
+    }
+
+    .show{
+      opacity: 1;
+      margin-right: 1rem ;
     }
   
     .sidebar {
@@ -603,13 +661,14 @@ body{
 
   @media screen and (max-width:1000px) {
     .first-page-title {
-      width: 100%;
-      padding: 3rem 5px 1rem 5px;
+      font-size: 1.75rem;
+      max-width: 80svw;
     }
     .first-page-subtitle {
-      width: 100%;
+
+      max-width: 70svw;
       padding: 0 8px;
-      margin-top:2.5rem;
+      margin-top:1.5rem;
     }
     .contact-form {
       padding: 1rem 10px;
@@ -663,11 +722,11 @@ body{
     animation: left 3s linear;
   }
 
-  @keyframes left {
+  /* @keyframes left {
     0% {
       margin-right:5rem;
     }
     100% {
       margin-right:1rem;
     }
-  }
+  } */

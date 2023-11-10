@@ -1,4 +1,24 @@
 
+
+
+const observer = new IntersectionObserver(( entries ) => {
+  entries.forEach( entry => {
+    //console.log("something");
+    if( entry.isIntersecting ) {
+      entry.target.classList.add('show')
+    }else {
+      entry.target.classList.remove('show')
+    }
+  } )
+} )
+
+const hiddenElement = document.querySelectorAll('.hidden')
+
+hiddenElement.forEach( ele => {
+  //console.log(ele);
+  observer.observe(ele)
+} )
+
 // Initialize EmailJS with your user ID
 emailjs.init('jiNZ2YVmdz_LkV5et');
 
@@ -75,9 +95,10 @@ function detectPreferredColorScheme() {
 
   function scrollToClass( className ) {
     const element = document.querySelector(`.${className}`)
-    //console.log(element)
+    console.log(element)
     if( element ) {
       element.scrollIntoView({behavior:"smooth"})
+
     }
   }
 

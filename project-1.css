@@ -211,10 +211,12 @@ body{
   text-align: center; 
   letter-spacing: 0.5px;
 }
-
+.projects-container-description-info{
+  color: hsl(0, 0%, 60%);
+}
 .container-zoomcar-description {
-  width: min(65svw, 75ch);
-  margin: 0 auto;
+  width: min(75svw, 100ch);
+  margin: 0 auto; 
   font-weight: 500;
   word-spacing: 5px;
   font-size: 1.2rem;
