@@ -10,7 +10,6 @@ const options = {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       if(entry.isIntersecting) {
         entry.target.classList.add('show')
       }else {
@@ -52,8 +51,8 @@ function sendEmail(event) {
       console.log('Error sending email:', error);
       // You can add an error message or handle the error condition here
     });
-    const dialog = document.querySelector('dialog')
-    dialog.showModal()
+  dialog.style.display = 'flex'
+  dialog.style.flexDirection ='column'
 
   // Clear the form inputs
   document.getElementById('name').value = '';
@@ -132,8 +131,11 @@ function detectPreferredColorScheme() {
     }
   }
 
+  const dialog = document.querySelector('dialog')
+  dialog.close()
   
-  function handleDialogBox() {
-    const dialog = document.querySelector('dialog')
-    dialog.close()
+  function handleDialogBox() {  
+    
+  dialog.style.display = 'none'
+
   }
