@@ -1,23 +1,27 @@
 
 
 
-const observer = new IntersectionObserver(( entries ) => {
-  entries.forEach( entry => {
-    //console.log("something");
-    if( entry.isIntersecting ) {
-      entry.target.classList.add('show')
-    }else {
-      entry.target.classList.remove('show')
-    }
-  } )
-} )
+const element = document.querySelectorAll('.hidden');
+const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px', // No margin
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+};
 
-const hiddenElement = document.querySelectorAll('.hidden')
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if(entry.isIntersecting) {
+        entry.target.classList.add('show')
+      }else {
+        entry.target.classList.remove('show')
+      }
+    });
+}, options);
 
-hiddenElement.forEach( ele => {
-  //console.log(ele);
-  observer.observe(ele)
-} )
+// Start observing the element
+// observer.observe(element);
+element.forEach( ele => observer.observe(ele) )
 
 // Initialize EmailJS with your user ID
 emailjs.init('jiNZ2YVmdz_LkV5et');
@@ -126,4 +130,5 @@ function detectPreferredColorScheme() {
     }
   }
 
+  
   
