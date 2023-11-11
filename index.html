@@ -41,7 +41,6 @@
     <!-- <img src='./images/frontpage2.jpeg' id="frontPageImage"> -->
     <div class="first-page-title hidden">Hey, I'm  Rohit pandey</div>
     <div class="hidden first-page-subtitle">I am a Full Stack Developer and I love to create user-freindly web application using MERN stack to materialize Ideas to Products.
-      
     </div>
     
 </section>
@@ -114,9 +113,16 @@
             <div class="contact-form-element-for">Message</div>
             <textarea required id='message' type="text" rows="10" cols="20" class="form-element-input-message" placeholder="Enter Your Message"></textarea>
         </div>
-        <div class="contact-form-button-container"><button class="contact-form-button">Submit</button></div>
+        <div class="contact-form-button-container"><button onclick="sendEmail" class="contact-form-button">Submit</button></div>
     </form>
-    </section>
+    <dialog id="emailSent" >
+      <h2>Thank you for your response, I'll connect to you asap.</h2>
+      <h3>Please click on below button to remove the current popup.</h3>
+      <button onclick="handleDialogBox()">Hide this</button>
+    </dialog>
+  </section>
+
+
 
     <section class="bottom">
         <div class="bottom-social">
@@ -138,9 +144,6 @@
         <hr>
         <div class="bottom-rights">Created by Rohit pandey</div>
     </section>
-
-
-
 
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">

@@ -31,7 +31,7 @@ function sendEmail(event) {
   event.preventDefault(); // Prevent the form from submitting
 
   // Get the values from the form inputs
-  const name = document.getElementById('name').value;
+  
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
@@ -52,6 +52,8 @@ function sendEmail(event) {
       console.log('Error sending email:', error);
       // You can add an error message or handle the error condition here
     });
+    const dialog = document.querySelector('dialog')
+    dialog.showModal()
 
   // Clear the form inputs
   document.getElementById('name').value = '';
@@ -131,4 +133,7 @@ function detectPreferredColorScheme() {
   }
 
   
-  
+  function handleDialogBox() {
+    const dialog = document.querySelector('dialog')
+    dialog.close()
+  }

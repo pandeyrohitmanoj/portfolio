@@ -37,6 +37,17 @@ body{
   transform: translateX(0);
 }
 
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50% );
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 .navbar {
   z-index: 2;
     display: flex;
@@ -439,6 +450,7 @@ body{
   }
   .contact {    
     /* width: min(70svw,100ch); */
+    position: relative;
     width: 100svw;
     background-color: hsl(0, 0%, 15%);
     padding-bottom: 4rem;
